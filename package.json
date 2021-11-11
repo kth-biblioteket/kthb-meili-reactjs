@@ -2,14 +2,25 @@
   "name": "kthb-meili-reactjs",
   "version": "0.1.0",
   "private": true,
+  "homepage": "/mrbs/",
   "dependencies": {
+    "@auth0/auth0-react": "^1.8.0",
+    "@meilisearch/instant-meilisearch": "^0.5.9",
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "algoliasearch": "^4.11.0",
+    "bootstrap": "^5.1.3",
+    "instantsearch.css": "^7.4.5",
     "react": "^17.0.2",
+    "react-bootstrap": "^2.0.2",
     "react-dom": "^17.0.2",
+    "react-instantsearch-dom": "^6.15.0",
+    "react-openidconnect": "^1.1.1",
+    "react-router-dom": "^6.0.1",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "webpack-sources": "^3.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
