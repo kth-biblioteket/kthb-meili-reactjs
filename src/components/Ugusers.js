@@ -60,7 +60,7 @@ function Ugusers() {
   
                 </div>
                 <div className="right-panel">
-                  <SearchBox />
+                  <SearchBox showLoadingIndicator/>
                   <InfiniteHits hitComponent={Hit} />
   
                 </div>
@@ -74,7 +74,7 @@ function Ugusers() {
     function Hit(props) {
       let ugaff = ""
       if (typeof props.hit.ugAffiliation != "undefined") {
-        if (props.hit.ugAffiliation.length > 0) {
+        if (Array.isArray(props.hit.ugAffiliation) && props.hit.ugAffiliation.length > 0) {
           for (let index = 0; index < props.hit.ugAffiliation.length; index++) {
             if (index === 0) {
               ugaff += props.hit.ugAffiliation[index];
@@ -82,6 +82,8 @@ function Ugusers() {
               ugaff += ', ' + props.hit.ugAffiliation[index];
             }
           }
+        } else {
+          ugaff = props.hit.ugAffiliation;
         }
   
       }

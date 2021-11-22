@@ -22,28 +22,27 @@ function NavBar() {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav variant="" activeKey="/">
+                    <Nav variant="" activeKey="/mrbs">
                         <Nav.Item>
-                            <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+                            <Nav.Link as={NavLink} to="/mrbs">Home</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link as={NavLink} to="/kthemployees">KTH Anställda(historik)</Nav.Link>
+                            <Nav.Link as={NavLink} to="/mrbs/kthemployees">KTH Anställda(historik)</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link as={NavLink} to="/ugusers">KTH Användare(UG)</Nav.Link>
+                            <Nav.Link as={NavLink} to="/mrbs/hr">KTH HR</Nav.Link>
                         </Nav.Item>
                         <Nav.Item>
-                            <Nav.Link as={NavLink} to="/about">
-                                About
-                            </Nav.Link>
+                            <Nav.Link as={NavLink} to="/mrbs/ugusers">KTH Användare(UG)</Nav.Link>
                         </Nav.Item>
                     </Nav>
                     <Form className="d-flex">
                         <Button variant="outline-success" onClick={logout}>Logout</Button>
                     </Form>
                 </Navbar.Collapse>
+                <div id="gradientBorder"></div>
             </Navbar>
-            <div id="gradientBorder"></div>
+            
         </>
     );
 }

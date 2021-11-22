@@ -9,51 +9,25 @@ import NavBar from "./components/navBar"
 
 import Login from './components/Login';
 import Kthemployees from './components/Kthemployees';
+import Hr from './components/Hr';
 import Ugusers from './components/Ugusers';
 import useToken from './useToken';
-
-//import { useAuth0 } from '@auth0/auth0-react';
 
 function App() {
   const { token, setToken } = useToken();
   if (!token) {
     return <Login setToken={setToken} />
   }
-
-  /*
-    const {
-      isLoading,
-      isAuthenticated,
-      error,
-      user,
-      loginWithRedirect,
-      logout,
-    } = useAuth0();
-  
-    if (isLoading) {
-      return <div>Loading...</div>;
-    }
-    if (error) {
-      return <div>Oops... {error.message}</div>;
-    }
-    */
-
-  //if (isAuthenticated) {
     return (
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="kthemployees" element={<Kthemployees />} />
-          <Route path="ugusers" element={<Ugusers />} />
-          <Route path="about" element={<About />} />
+          <Route path="/mrbs" element={<Home />} />
+          <Route path="mrbs/kthemployees" element={<Kthemployees />} />
+          <Route path="mrbs/hr" element={<Hr />} />
+          <Route path="mrbs/ugusers" element={<Ugusers />} />
         </Routes>
       </div>
     );
-  /*  
-  } else {
-    return <button onClick={loginWithRedirect}>Log in</button>;
-  }
-  */
 }
 
 function Home() {
@@ -62,25 +36,9 @@ function Home() {
       <Container>
         <main>
           <NavBar />
-          <h4>Hitta personer i olika index</h4>
+          <div className="header"><h4>Sökning i divers olika index på KTH</h4></div>
           <p>
             Välj ett index och börja söka
-          </p>
-        </main>
-      </Container>
-    </>
-  );
-}
-
-function About() {
-  return (
-    <>
-      <Container>
-        <main>
-          <NavBar />
-          <h2>KTHB</h2>
-          <p>
-            Biblioteket
           </p>
         </main>
       </Container>
